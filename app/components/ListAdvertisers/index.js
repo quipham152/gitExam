@@ -1,13 +1,17 @@
 /**
 *
-* List Advertisers
+* ListAdvertisers
 *
 */
 
 import React from 'react';
 import Header from '../Header';
+import Breadcrumb from '../Breadcrumb';
+import Button from '../Button';
+// import styled from 'styled-components';
 
-class ListAdvertisers extends React.Component {
+
+class ListAdvertisers extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
@@ -16,16 +20,12 @@ class ListAdvertisers extends React.Component {
           <div className="top-header">
             <div className="container">
               <div className="row">
+              <Breadcrumb title="Advertisers" item="item" itemtitle="Compaigns"
+                                              itemactive1="active" itemTitleActive1="Advertisers"/>
                 <div className="col-sm-8">
-                  <h1>Advertisers</h1>
-                  <nav className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="#">Compaigns</a></li>
-                    <li className="breadcrumb-item active"><span>Advertisers</span></li>
-                  </nav>
-                </div>
-                <div className="col-sm-4">
                   <div className="pull-right">
-                    <a className="btn btn-primary" data-toggle="modal" data-target="#add_advertiser" href="#"> New Advertiser</a>
+                  <Button primary="primary" name="advertiser" buttonName="New Advertiser"/>
+
                   </div>
                 </div>
               </div>
@@ -92,4 +92,5 @@ class ListAdvertisers extends React.Component {
 ListAdvertisers.propTypes = {
 
 };
+
 export default ListAdvertisers;

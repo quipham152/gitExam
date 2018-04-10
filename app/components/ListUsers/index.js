@@ -1,14 +1,18 @@
 /**
 *
-* List Users
+* ListUsers
 *
 */
 
 import React from 'react';
 import Header from '../Header';
 import avatar from '../../../vendor/images/avatar.jpg';
+import Breadcrumb from '../Breadcrumb';
+import Button from '../Button';
+// import styled from 'styled-components';
 
-class ListUsers extends React.Component {
+
+class ListUsers extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
@@ -16,9 +20,10 @@ class ListUsers extends React.Component {
         <div id="main-content">
           <div className="top-header">
             <div className="container">
-              <h1>Users</h1>
-              <a className="btn btn-primary pull-right" data-toggle="modal" data-target="#add_user" href="#"> New user</a>
-
+              <Breadcrumb title="User" />
+              <div className="pull-right">
+                <Button primary="primary" name="user" buttonName="New User" />
+              </div>
             </div>
           </div>
           <div className="list-view container">
@@ -154,8 +159,8 @@ class ListUsers extends React.Component {
   }
 }
 
-
 ListUsers.propTypes = {
 
 };
+
 export default ListUsers;

@@ -1,13 +1,17 @@
 /**
 *
-* List Sites
+* ListSites
 *
 */
 
 import React from 'react';
 import Header from '../Header';
+import Breadcrumb from '../Breadcrumb';
+import Button from '../Button';
+// import styled from 'styled-components';
 
-class ListSites extends React.Component {
+
+class ListSites extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
@@ -16,18 +20,13 @@ class ListSites extends React.Component {
           <div className="top-header">
             <div className="container">
               <div className="row">
+                <Breadcrumb title="Sites" item="item" itemtitle="Inventory"
+                                          itemactive1="active" itemTitleActive1="Bliink"
+                                          itemactive2="active" itemTitleActive2="Packs"/>
                 <div className="col-sm-8">
-                  <h1>Sites</h1>
-                  <nav className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="#">Inventory</a></li>
-                    <li className="breadcrumb-item active"><span>Bliink</span></li>
-                    <li className="breadcrumb-item active"><span>Packs</span></li>
-                  </nav>
-                </div>
-                <div className="col-sm-4">
                   <div className="pull-right">
-                    <a className="btn btn-secondary" data-toggle="modal" data-target="#add_user" href="#"> Edit network</a>
-                    <a className="btn btn-primary" data-toggle="modal" data-target="#add_site" href="#"> New site</a>
+                    <Button primary="secondary" name="user" buttonName="Edit network"/>
+                    <Button primary="primary" name="site" buttonName="New site"/>
                   </div>
                 </div>
               </div>
@@ -92,4 +91,5 @@ class ListSites extends React.Component {
 ListSites.propTypes = {
 
 };
+
 export default ListSites;

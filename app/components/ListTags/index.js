@@ -1,13 +1,17 @@
 /**
 *
-* List Tags
+* ListTags
 *
 */
 
 import React from 'react';
 import Header from '../Header';
+import Breadcrumb from '../Breadcrumb';
+import Button from '../Button';
+// import styled from 'styled-components';
 
-class ListTags extends React.Component {
+
+class ListTags extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
@@ -16,19 +20,15 @@ class ListTags extends React.Component {
           <div className="top-header">
             <div className="container">
               <div className="row">
+                <Breadcrumb title="Le monde" item="item" itemactive1="active" itemactive2="active" itemactive3="active"
+                            itemtitle="Inventory" itemTitleActive1="Bliink" itemTitleActive2="Le monde"
+                            itemTitleActive3="Packs"/>
                 <div className="col-sm-8">
-                  <h1>Le monde</h1>
-                  <nav className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="#">Inventory</a></li>
-                    <li className="breadcrumb-item active"><span>Bliink</span></li>
-                    <li className="breadcrumb-item active"><span>Le monde</span></li>
-                    <li className="breadcrumb-item active"><span>Packs</span></li>
-                  </nav>
-                </div>
-                <div className="col-sm-4">
                   <div className="pull-right">
-                    <a className="btn btn-secondary" href="#"> Edit site</a>
-                    <a className="btn btn-primary" data-toggle="modal" data-target="#add_tag" href="#"> New tag</a>
+                    <Button primary="secondary" buttonName="Edit site"/>
+                    <Button primary="primary" name="tag" buttonName="New tag"/>
+                    {/* <a className="btn btn-secondary" href="#"> Edit site</a>
+                    <a className="btn btn-primary" data-toggle="modal" data-target="#add_tag" href="#"> New tag</a> */}
                   </div>
                 </div>
               </div>
@@ -92,4 +92,5 @@ class ListTags extends React.Component {
 ListTags.propTypes = {
 
 };
+
 export default ListTags;

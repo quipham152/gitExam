@@ -1,14 +1,18 @@
 /**
 *
-* List Net works
+* ListNetworks
 *
 */
 
 import React from 'react';
 import Header from '../Header';
 import avatar from '../../../vendor/images/avatar.jpg';
+import Breadcrumb from '../Breadcrumb';
+import Button from '../Button';
+// import styled from 'styled-components';
 
-class ListNetworks extends React.Component {
+
+class ListNetworks extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
@@ -16,10 +20,11 @@ class ListNetworks extends React.Component {
         <div id="main-content">
           <div className="top-header">
             <div className="container">
-              <h1>Inventory</h1>
+              <Breadcrumb title="Inventory"/>
               <div className="pull-right">
-                <a className="btn btn-secondary" data-toggle="modal" data-target="#add_user" href="#"> Manage packs</a>
-                <a className="btn btn-primary" data-toggle="modal" data-target="#add_network" href="#"> New network</a>
+                <Button primary="secondary" name="user" buttonName="Manage packs" />
+                <Button primary="primary" name="network" buttonName="New network" />
+
               </div>
             </div>
           </div>
@@ -124,7 +129,9 @@ class ListNetworks extends React.Component {
     );
   }
 }
+
 ListNetworks.propTypes = {
 
 };
+
 export default ListNetworks;

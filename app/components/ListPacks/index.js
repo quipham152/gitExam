@@ -1,14 +1,18 @@
 /**
 *
-* List Packs
+* ListPacks
 *
 */
 
 import React from 'react';
 import Header from '../Header';
 import avatar from '../../../vendor/images/avatar.jpg';
+import Breadcrumb from '../Breadcrumb';
+import Button from '../Button';
+// import styled from 'styled-components';
 
-class ListPacks extends React.Component {
+
+class ListPacks extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
@@ -17,17 +21,12 @@ class ListPacks extends React.Component {
           <div className="top-header">
             <div className="container">
               <div className="row">
+                <Breadcrumb title="Packs" item="item" itemtitle="Inventory"
+                                          itemactive1="active" itemTitleActive1="Packs"/>
                 <div className="col-sm-8">
-                  <h1>Packs</h1>
-                  <nav className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="#">Inventory</a></li>
-                    <li className="breadcrumb-item active"><span>Packs</span></li>
-                  </nav>
-                </div>
-                <div className="col-sm-4">
                   <div className="pull-right">
-                    <a className="btn btn-secondary" data-toggle="modal" data-target="#add_user" href="#"> Manage packs</a>
-                    <a className="btn btn-primary" data-toggle="modal" data-target="#add_pack" href="#"> New network</a>
+                  <Button primary="secondary" name="user" buttonName="Manage packs"/>
+                  <Button primary="primary" name="pack" buttonName="New network"/>
                   </div>
                 </div>
               </div>
@@ -160,7 +159,9 @@ class ListPacks extends React.Component {
     );
   }
 }
+
 ListPacks.propTypes = {
 
 };
+
 export default ListPacks;

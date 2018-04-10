@@ -1,13 +1,17 @@
 /**
 *
-* List Ads
+* ListAds
 *
 */
 
 import React from 'react';
 import Header from '../Header';
+import Breadcrumb from '../Breadcrumb';
+import Button from '../Button';
+// import styled from 'styled-components';
 
-class ListAds extends React.Component {
+
+class ListAds extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
@@ -16,18 +20,14 @@ class ListAds extends React.Component {
           <div className="top-header">
             <div className="container">
               <div className="row">
+                <Breadcrumb title="Dior men spring 2017"
+                            item="item" itemactive1="active" itemactive2="active"
+                            itemtitle="Compaigns" itemTitleActive1="Dior men spring 2017"
+                            itemTitleActive2="Ads"/>
                 <div className="col-sm-8">
-                  <h1>Dior men spring 2017</h1>
-                  <nav className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="#">Compaigns</a></li>
-                    <li className="breadcrumb-item active"><span>Dior men spring 2017</span></li>
-                    <li className="breadcrumb-item active"><span>Ads</span></li>
-                  </nav>
-                </div>
-                <div className="col-sm-4">
                   <div className="pull-right">
-                    <a className="btn btn-secondary" href="#"> Edit compaign</a>
-                    <a className="btn btn-primary" data-toggle="modal" data-target="#add_ads" href="#"> New ad</a>
+                    <Button primary="secondary" buttonName="Edit compaign"/>
+                    <Button primary="primary" name="ads" buttonName="New ad"/>
                   </div>
                 </div>
               </div>
@@ -94,4 +94,6 @@ class ListAds extends React.Component {
 ListAds.propTypes = {
 
 };
+
 export default ListAds;
+
