@@ -28,7 +28,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                   <p>Samuel</p>
                   <i className="fas fa-caret-down"></i>
               </button>
-  
+
               <ul className="dropdown-menu">
                   <li><a className="dropdown-item" href="#">Profile</a></li>
                   <li><a className="dropdown-item" href="#">Sign out</a></li>
@@ -36,7 +36,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
           </div>
           </div>
       </div>
-  </div>  
+  </div>
     );
   }
 }
