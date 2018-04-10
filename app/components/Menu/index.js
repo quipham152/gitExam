@@ -22,8 +22,8 @@ class Menu extends React.Component { // eslint-disable-line react/prefer-statele
         </div>
         <div className="container-fluid">
             <ul className="nav navbar-nav">
-                <li className="active"><a href="#"> Dashboard</a></li>
-                <li><a href="#"> Compaigns</a></li>
+                <li><a href="#"> Dashboard</a></li>
+                <li className="active"><a href="#"> Compaigns</a></li>
                 <li><a href="#"> Inventory</a></li>
                 <li><a href="#"> Users</a></li>
                 <li><a href="#"> Reports</a></li>

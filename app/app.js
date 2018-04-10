@@ -23,14 +23,17 @@ import App from 'containers/App';
 import LanguageProvider from 'containers/LanguageProvider';
 
 // Import Theme file css
-import '!!style-loader!css-loader!../vendor/css/style.css';
+// import '!!style-loader!css-loader!../vendor/css/style.css';
 import '!!style-loader!css-loader!../vendor/css/styles.css';
-import '!!style-loader!css-loader!../vendor/css/bootstrap-grid.css';
-import '!!style-loader!css-loader!../vendor/css/bootstrap-reboot.css';
-import '!!style-loader!css-loader!../vendor/css/fontface.css';
-import '!!style-loader!css-loader!../vendor/css/mixin.css';
-import '!!style-loader!css-loader!../vendor/css/select2.min.css';
+// import '!!style-loader!css-loader!../vendor/css/bootstrap-grid.css';
+// import '!!style-loader!css-loader!../vendor/css/bootstrap-reboot.css';
+// import '!!style-loader!css-loader!../vendor/css/fontface.css';
+// import '!!style-loader!css-loader!../vendor/css/mixin.css';
+// import '!!style-loader!css-loader!../vendor/css/select2.min.css';
 import '!!style-loader!css-loader!../vendor/css/fontawesome-all.min.css';
+
+// Import template Js
+import bootstrap from '../node_modules//bootstrap/dist/js/bootstrap';
 
 // Load the favicon, the manifest.json file and the .htaccess file
 /* eslint-disable import/no-unresolved, import/extensions */
