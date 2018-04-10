@@ -3609,13 +3609,13 @@ tbody.collapse.in {
       margin-left: -1px; }
     .input-group-btn > .btn:hover, .input-group-btn > .btn-secondary:hover, .input-group-btn > .btn-thirddary:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn-secondary:focus, .input-group-btn > .btn-thirddary:focus, .input-group-btn > .btn:active, .input-group-btn > .btn-secondary:active, .input-group-btn > .btn-thirddary:active {
       z-index: 2; }
-  
+
   .input-group-btn:first-child > .btn,
   .input-group-btn:first-child > .btn-secondary,
   .input-group-btn:first-child > .btn-thirddary,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
-  
+
   .input-group-btn:last-child > .btn,
   .input-group-btn:last-child > .btn-secondary,
   .input-group-btn:last-child > .btn-thirddary,

@@ -23,6 +23,10 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                 <span>Samuel</span>
                 <i className="fas fa-caret-down"></i>
               </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6a670960d70cc5d21eb40fddd1e410bb45ac80b8
               <ul className="dropdown-menu">
                 <li><a className="dropdown-item" href="">Profile</a></li>
                 <li><a className="dropdown-item" href="">Sign out</a></li>
@@ -31,6 +35,10 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
             </div>
           </div>
       </div>
+<<<<<<< HEAD
+=======
+  </div>
+>>>>>>> 6a670960d70cc5d21eb40fddd1e410bb45ac80b8
     );
   }
 }
