@@ -44,6 +44,8 @@ $bliink_dark_red:      #B30010 !default;
     }
   }
   #account_login{
+    flex-grow: 1;
+    padding-right: 1%;
     text-align: right;
     button{
       background-color: transparent;
@@ -59,7 +61,7 @@ $bliink_dark_red:      #B30010 !default;
       float: left;
       margin-right: 5px;
     }
-    p{
+    span{
       font-size: 15px;
       color: #777;
       float: left;
@@ -69,10 +71,14 @@ $bliink_dark_red:      #B30010 !default;
     .fa-caret-down{
       padding-left: 10px;
       line-height: 45px;
+      font-size: 1.8em;
       
     }
     .fa-caret-down:before{
       color: #777;
+    }
+    .dropdown-toggle{
+      &:after{ display: none; }
     }
     .dropdown-menu{
       background-color: #3A3F46;

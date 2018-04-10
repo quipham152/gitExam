@@ -3789,11 +3789,11 @@ tbody.collapse.in {
       width: auto;
       border-top: 0;
       box-shadow: none; }
-      .navbar-collapse.collapse {
+      /* .navbar-collapse.collapse {
         display: block !important;
         height: auto !important;
         padding-bottom: 0;
-        overflow: visible !important; }
+        overflow: visible !important; } */
       .navbar-collapse.in {
         overflow-y: visible; }
       .navbar-fixed-top .navbar-collapse,
@@ -8692,6 +8692,7 @@ body {
     background-color: transparent;
     border-color: transparent; }
     #header .navbar-default .navbar-nav > li a {
+      font-size: 1.4em;
       text-transform: uppercase;
       padding: 15px 24px; }
       #header .navbar-default .navbar-nav > li a::after {
@@ -8704,6 +8705,8 @@ body {
       #header .navbar-default .navbar-nav > li.active a::after {
         border-bottom: 1px solid #fff; }
   #header #account_login {
+    flex-grow: 1;
+    padding-right: 1%;
     text-align: right; }
     #header #account_login button {
       background-color: transparent;
@@ -8717,13 +8720,15 @@ body {
       max-height: 45px;
       float: left;
       margin-right: 5px; }
-    #header #account_login p {
+    #header #account_login span {
       font-size: 15px;
       color: #777;
       float: left;
       margin-bottom: 0;
       line-height: 45px; }
+      #header #account_login .dropdown-toggle::after{ display: none; }
     #header #account_login .fa-caret-down {
+      font-size: 1.8em;
       padding-left: 10px;
       line-height: 45px; }
     #header #account_login .fa-caret-down:before {

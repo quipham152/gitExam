@@ -43,6 +43,8 @@ body {
       #header .navbar-default .navbar-nav > li.active a::after {
         border-bottom: 1px solid #fff; }
   #header #account_login {
+    flex-grow: 1;
+    padding-right: 1%;
     text-align: right; }
     #header #account_login button {
       background-color: transparent;
@@ -56,13 +58,14 @@ body {
       max-height: 45px;
       float: left;
       margin-right: 5px; }
-    #header #account_login p {
+    #header #account_login span {
       font-size: 15px;
       color: #777;
       float: left;
       margin-bottom: 0;
       line-height: 45px; }
     #header #account_login .fa-caret-down {
+      font-size: 1.8em;
       padding-left: 10px;
       line-height: 45px; }
     #header #account_login .fa-caret-down:before {
