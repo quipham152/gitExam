@@ -5,41 +5,26 @@
 */
 
 import React from 'react';
-import Header from '../Header';
-import Breadcrumb from '../Breadcrumb';
-import Button from '../Button';
+
 // import styled from 'styled-components';
 
-
+var inlineStyle={
+  width:"100%"
+}
 class ListSites extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
-        <Header />
         <div id="main-content">
-          <div className="top-header">
-            <div className="container">
-              <div className="row">
-                <Breadcrumb title="Sites" item="item" itemtitle="Inventory"
-                                          itemactive1="active" itemTitleActive1="Bliink"
-                                          itemactive2="active" itemTitleActive2="Packs"/>
-                <div className="col-sm-8">
-                  <div className="pull-right">
-                    <Button primary="secondary" name="user" buttonName="Edit network"/>
-                    <Button primary="primary" name="site" buttonName="New site"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div className="list-view container">
             <div className="row">
-              <form className="form-inline">
+              <form className="form-inline" style={inlineStyle}>
                 <div className="form-group col-sm-3 col-xs-12">
                   <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Search by compaign name..." />
                   <button type="submit" className="btn btn-default"><i className="fa fa-search"></i></button>
                 </div>
-              </form>
+
               <div className="clearfix"></div>
               <table id="datatable" className="table table-hover">
                 <thead>
@@ -81,6 +66,7 @@ class ListSites extends React.Component { // eslint-disable-line react/prefer-st
                 <li><a href="#">3</a></li>
                 <li><a href="#"><i className="fa fa-angle-right"></i></a></li>
               </ul>
+              </form>
             </div>
           </div>
         </div>

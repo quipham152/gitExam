@@ -1,9 +1,9 @@
 // import React from 'react';
 // import { shallow } from 'enzyme';
 
-// import Breadcrumb from '../index';
+// import PanelPeople from '../index';
 
-describe('<Breadcrumb />', () => {
+describe('<PanelPeople />', () => {
   it('Expect to have unit tests specified', () => {
     expect(true).toEqual(false);
   });

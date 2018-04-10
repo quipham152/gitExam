@@ -1,0 +1,43 @@
+/**
+*
+* PanelPeople
+*
+*/
+
+import React from 'react';
+import avatar from '../../../vendor/images/avatar.jpg';
+
+// import styled from 'styled-components';
+
+
+class PanelPeople extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props){
+    super(props);
+  }
+  render() {
+    return (
+      <div className="panel-people col-sm-3">
+        <div className="panel-people-inner">
+          <button className="btn btn-primary dropdown-toggle pull-right" type="button" data-toggle="dropdown">...</button>
+          <ul className="dropdown-menu">
+            <li><a className="dropdown-item" href="#"><i className="fa fa-pencil"></i> Edit</a></li>
+            <li><a className="dropdown-item" data-toggle="modal" data-target="#myModal" href="#"><i className="fa fa-trash-o"></i> Delete</a></li>
+          </ul>
+          <img alt="Samuel" src={avatar} />
+
+          <h3>{this.props.name}</h3>
+          <p>{this.props.admin}</p>
+          <p>{this.props.email}</p>
+        </div>
+
+      </div>
+
+    );
+  }
+}
+
+PanelPeople.propTypes = {
+
+};
+
+export default PanelPeople;

@@ -5,36 +5,21 @@
 */
 
 import React from 'react';
-import Header from '../Header';
-import Breadcrumb from '../Breadcrumb';
-import Button from '../Button';
-// import styled from 'styled-components';
 
+// import styled from 'styled-components';
+var inlineStyle={
+  width:"100%"
+}
 
 class ListAds extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
-        <Header />
         <div id="main-content">
-          <div className="top-header">
-            <div className="container">
-              <div className="row">
-                <Breadcrumb title="Dior men spring 2017"
-                            item="item" itemactive1="active" itemactive2="active"
-                            itemtitle="Compaigns" itemTitleActive1="Dior men spring 2017"
-                            itemTitleActive2="Ads"/>
-                <div className="col-sm-8">
-                  <div className="pull-right">
-                    <Button primary="secondary" buttonName="Edit compaign"/>
-                    <Button primary="primary" name="ads" buttonName="New ad"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div className="list-view container">
             <div className="row">
+            <form action="form-inline" style={inlineStyle}>
               <table id="datatable" className="table">
                 <thead>
                   <tr>
@@ -83,6 +68,7 @@ class ListAds extends React.Component { // eslint-disable-line react/prefer-stat
                 <li><a href="#">3</a></li>
                 <li><a href="#"><i className="fa fa-angle-right"></i></a></li>
               </ul>
+              </form>
             </div>
           </div>
         </div>
