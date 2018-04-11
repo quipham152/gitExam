@@ -5,13 +5,17 @@
 */
 
 import React from 'react';
-
+import SearchBar from '../SearchBar';
 // import styled from 'styled-components';
 
-var inlineStyle={
-  width:"100%"
-}
 class ListSites extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props){
+    super(props);
+    this.state={ value :''};
+  }
+  handleChange(e){
+    this.setState({value : e.target.value})
+  }
   render() {
     return (
       <div>
@@ -19,11 +23,8 @@ class ListSites extends React.Component { // eslint-disable-line react/prefer-st
 
           <div className="list-view container">
             <div className="row">
-              <form className="form-inline" style={inlineStyle}>
-                <div className="form-group col-sm-3 col-xs-12">
-                  <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Search by compaign name..." />
-                  <button type="submit" className="btn btn-default"><i className="fa fa-search"></i></button>
-                </div>
+              <form className="form-inline" >
+              <SearchBar handleChange={this.state.handleChange}/>
 
               <div className="clearfix"></div>
               <table id="datatable" className="table table-hover">

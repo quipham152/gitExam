@@ -26,8 +26,8 @@ class PanelPeople extends React.Component { // eslint-disable-line react/prefer-
           <img alt="Samuel" src={avatar} />
 
           <h3>{this.props.name}</h3>
-          <p>{this.props.admin}</p>
-          <p>{this.props.email}</p>
+          <p>{this.props.option1}</p>
+          <p>{this.props.option2}</p>
         </div>
 
       </div>

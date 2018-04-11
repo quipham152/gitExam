@@ -5,14 +5,18 @@
 */
 
 import React from 'react';
-
+import SearchBar from '../SearchBar';
 // import styled from 'styled-components';
 
-var inlineStyle={
-    width:"100%",
-};
-class ListAdvertisers extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
+class ListAdvertisers extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+  }
+  handleChange(e) {
+    this.setState({ value: e.target.value })
+  }
   render() {
     return (
       <div>
@@ -20,13 +24,10 @@ class ListAdvertisers extends React.Component { // eslint-disable-line react/pre
 
           <div className="list-view container">
             <div className="row">
-              <form action="form-inline" style={inlineStyle} >
+              <form action="form-inline"  >
                 <div className="input-group filter col-sm-8">
-                  <div className="form-group col-sm-3 col-xs-12">
-                    <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Search by compaign name..." />
-                    <button type="submit" className="btn btn-default"><i className="fa fa-search"></i></button>
-                  </div>
-                  <select className="filter_group_by" id="filter_staus">
+                  <SearchBar handleChange={this.state.handleChange} />
+                  <select className="filter_group_by" id="filter_status">
                     <option value="1" title="Status">Active</option>
                     <option value="2" title="Status">Expired</option>
                     <option value="3" title="Status">Un-active</option>

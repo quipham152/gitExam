@@ -6,10 +6,18 @@
 
 import React from 'react';
 import PanelPeople from '../PanelPeople';
+import SearchBar from '../SearchBar';
 // import styled from 'styled-components';
 
 
 class ListPacks extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+  }
+  handleChange(e) {
+    this.setState({ value: e.target.value })
+  }
   render() {
     return (
       <div>
@@ -17,20 +25,17 @@ class ListPacks extends React.Component { // eslint-disable-line react/prefer-st
           <div className="list-view container">
             <div className="row">
               <form className="form-inline">
-                <div className="form-group col-sm-3 col-xs-12">
-                  <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Search by compaign name..." />
-                  <button type="submit" className="btn btn-default"><i className="fa fa-search"></i></button>
-                </div>
+                <SearchBar handleChange={this.state.handleChange} />
 
                 <div className="clearfix"></div>
-                <PanelPeople name="Pack femmes" admin="4 sites" email="#4329"/>
-                <PanelPeople name="Pack luxe" admin="35 sites" email="#9008"/>
-                <PanelPeople name="Pack femmes" admin="4 sites" email="#4329"/>
-                <PanelPeople name="Pack luxe" admin="35 sites" email="#9008"/>
-                <PanelPeople name="Pack femmes" admin="4 sites" email="#4329"/>
-                <PanelPeople name="Pack luxe" admin="35 sites" email="#9008"/>
-                <PanelPeople name="Pack femmes" admin="4 sites" email="#4329"/>
-                <PanelPeople name="Pack luxe" admin="35 sites" email="#9008"/>
+                <PanelPeople name="Pack femmes" option1="4 sites" option2="#4329" />
+                <PanelPeople name="Pack luxe" option1="35 sites" option2="#9008" />
+                <PanelPeople name="Pack femmes" option1="4 sites" option2="#4329" />
+                <PanelPeople name="Pack luxe" option1="35 sites" option2="#9008" />
+                <PanelPeople name="Pack femmes" option1="4 sites" option2="#4329" />
+                <PanelPeople name="Pack luxe" option1="35 sites" option2="#9008" />
+                <PanelPeople name="Pack femmes" option1="4 sites" option2="#4329" />
+                <PanelPeople name="Pack luxe" option1="35 sites" option2="#9008" />
 
                 <div className="clearfix"></div>
                 <ul className="pagination">

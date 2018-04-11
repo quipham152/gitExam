@@ -7,9 +7,6 @@
 import React from 'react';
 
 // import styled from 'styled-components';
-var inlineStyle={
-  width:"100%"
-}
 
 class ListAds extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -19,7 +16,7 @@ class ListAds extends React.Component { // eslint-disable-line react/prefer-stat
 
           <div className="list-view container">
             <div className="row">
-            <form action="form-inline" style={inlineStyle}>
+            <form action="form-inline" >
               <table id="datatable" className="table">
                 <thead>
                   <tr>
