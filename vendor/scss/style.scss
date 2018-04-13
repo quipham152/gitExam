@@ -3,6 +3,9 @@ body{
   font-family: 'Lato', sans-serif;
   background-color: #F8F8FA;
 }
+.btn:focus, button:focus{
+  box-shadow: none !important;
+}
 $bliink_dark_blue:     #232A37 !default;
 $bliink_blue:          #1f2535 !default;
 $bliink_dark_blue_2:   #252B38 !default;
@@ -23,6 +26,7 @@ $bliink_dark_red:      #B30010 !default;
     border-color: transparent;
     .navbar-nav > li{
       a{
+        color: $bliink_gray;
         text-transform: uppercase;
         padding: 15px 24px;
         &::after{
@@ -44,7 +48,6 @@ $bliink_dark_red:      #B30010 !default;
     }
   }
   #account_login{
-    flex-grow: 1;
     padding-right: 1%;
     text-align: right;
     button{
