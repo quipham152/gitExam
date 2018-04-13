@@ -13,10 +13,23 @@ import SearchBar from '../SearchBar';
 class ListPacks extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = { value: '',
+      arrPeople: [
+        { name: "Pack femmes", option1: "4 sites", option2: "#4329" },
+        { name: "Pack luxe", option1: "35 sites", option2: "#9008" },
+        { name: "Pack femmes", option1: "4 sites", option2: "#4329" },
+        { name: "Pack luxe", option1: "35 sites", option2: "#9008" },
+        { name: "Pack femmes", option1: "4 sites", option2: "#4329" },
+        { name: "Pack luxe", option1: "35 sites", option2: "#9008" },
+    ]
+   };
   }
   handleChange(e) {
     this.setState({ value: e.target.value })
+  }
+  listRender() {
+    return this.state.arrPeople.map(people => (<PanelPeople name={people.name}
+    option1={people.option1} option2={people.option2} />));
   }
   render() {
     return (
@@ -28,14 +41,7 @@ class ListPacks extends React.Component { // eslint-disable-line react/prefer-st
                 <SearchBar handleChange={this.state.handleChange} />
 
                 <div className="clearfix"></div>
-                <PanelPeople name="Pack femmes" option1="4 sites" option2="#4329" />
-                <PanelPeople name="Pack luxe" option1="35 sites" option2="#9008" />
-                <PanelPeople name="Pack femmes" option1="4 sites" option2="#4329" />
-                <PanelPeople name="Pack luxe" option1="35 sites" option2="#9008" />
-                <PanelPeople name="Pack femmes" option1="4 sites" option2="#4329" />
-                <PanelPeople name="Pack luxe" option1="35 sites" option2="#9008" />
-                <PanelPeople name="Pack femmes" option1="4 sites" option2="#4329" />
-                <PanelPeople name="Pack luxe" option1="35 sites" option2="#9008" />
+                {this.listRender()}
 
                 <div className="clearfix"></div>
                 <ul className="pagination">

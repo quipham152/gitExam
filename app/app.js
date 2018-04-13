@@ -31,7 +31,7 @@ import '!!style-loader!css-loader!../vendor/css/styles.css';
 // import '!!style-loader!css-loader!../vendor/css/mixin.css';
 // import '!!style-loader!css-loader!../vendor/css/select2.min.css';
 import '!!style-loader!css-loader!../vendor/css/fontawesome-all.min.css';
-
+//import '!!style-loader!css-loader!../vendor/css/bootstrap.css';
 // Import template Js
 import bootstrap from '../node_modules//bootstrap/dist/js/bootstrap';
 

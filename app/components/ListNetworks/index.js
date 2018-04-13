@@ -13,10 +13,23 @@ import SearchBar from '../SearchBar';
 class ListNetworks extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = {
+      value: '',
+      arrPeople: [
+        { name: "Bliink", option1: "25 sites", option2: "#1234" },
+        { name: "Bliink", option1: "25 sites", option2: "#1234" },
+        { name: "Bliink", option1: "25 sites", option2: "#1234" },
+        { name: "Bliink", option1: "25 sites", option2: "#1234" },
+        { name: "Bliink", option1: "25 sites", option2: "#1234" },
+      ]
+    };
   }
   handleChange(e) {
     this.setState({ value: e.target.value })
+  }
+  listRender() {
+    return this.state.arrPeople.map(people => (<PanelPeople name={people.name}
+      option1={people.option1} option2={people.option2} />));
   }
   render() {
     return (
@@ -29,12 +42,7 @@ class ListNetworks extends React.Component { // eslint-disable-line react/prefer
                 <SearchBar handleChange={this.state.handleChange} />
 
                 <div className="clearfix"></div>
-                <PanelPeople name="Bliink" option1="25 sites" option2="#1234" />
-                <PanelPeople name="Bliink" option1="25 sites" option2="#1234" />
-                <PanelPeople name="Bliink" option1="25 sites" option2="#1234" />
-                <PanelPeople name="Bliink" option1="25 sites" option2="#1234" />
-                <PanelPeople name="Bliink" option1="25 sites" option2="#1234" />
-                <PanelPeople name="Bliink" option1="25 sites" option2="#1234" />
+                {this.listRender()}
                 <div className="clearfix"></div>
                 <ul className="pagination">
                   <li><a className="active" href="#">1</a></li>

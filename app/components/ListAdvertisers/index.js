@@ -6,16 +6,29 @@
 
 import React from 'react';
 import SearchBar from '../SearchBar';
+import ListAdvertisersData from '../ListAdvertisersData';
 // import styled from 'styled-components';
 
 
 class ListAdvertisers extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = {
+      value: '',
+      datas: [
+        { name: "Carrefour", category: "Food retail and service", status: "Validated" },
+        { name: "Carrefour", category: "Food retail and service", status: "Validated" },
+        { name: "Carrefour", category: "Food retail and service", status: "Validated" },
+        { name: "Carrefour", category: "Food retail and service", status: "Validated" },
+      ]
+    };
   }
   handleChange(e) {
     this.setState({ value: e.target.value })
+  }
+  dataRender(){
+    return this.state.datas.map(data=>(<ListAdvertisersData name={data.name}
+    category={data.category} status={data.status} />))
   }
   render() {
     return (
@@ -44,22 +57,8 @@ class ListAdvertisers extends React.Component { // eslint-disable-line react/pre
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Carrefour</td>
-                      <td>Food retail and service</td>
-                      <td><span className="badge badge-success">Validated</span></td>
-                      <td>
-                        <div className="dropdown show">
-                          <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ...
-                            </button>
-                          <ul className="dropdown-menu">
-                            <li><a className="dropdown-item" href="#"><i className="fa fa-pencil"></i> Edit</a></li>
-                            <li><a className="dropdown-item" data-toggle="modal" data-target="#delete_advertiser" href="#"><i className="fa fa-trash-o"></i> Delete</a></li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
+                    {this.dataRender()}
+
                   </tbody>
                 </table>
                 <div className="clearfix"></div>

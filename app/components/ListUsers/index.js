@@ -11,12 +11,25 @@ import SearchBar from '../SearchBar';
 
 
 class ListUsers extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={ value :''};
+    this.state = {
+      value: '',
+      arrPeople: [
+        { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
+        { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
+        { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
+        { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
+      ]
+    };
+
   }
-  handleChange(e){
-    this.setState({value : e.target.value})
+  handleChange(e) {
+    this.setState({ value: e.target.value })
+  }
+  listRender() {
+    return this.state.arrPeople.map(people => (<PanelPeople name={people.name}
+    option1={people.option1} option2={people.option2} />));
   }
   render() {
     return (
@@ -25,18 +38,11 @@ class ListUsers extends React.Component { // eslint-disable-line react/prefer-st
           <div className="list-view container">
             <div className="row">
               <form className="form-inline">
-                <SearchBar handleChange={this.state.handleChange}/>
+                <SearchBar handleChange={this.state.handleChange} />
 
 
                 <div className="clearfix"></div>
-                <PanelPeople name="Josie rios" option1="Administrator" option2="administrator_bliink@gmail.com"/>
-                <PanelPeople name="Josie rios" option1="Administrator" option2="administrator_bliink@gmail.com"/>
-                <PanelPeople name="Josie rios" option1="Administrator" option2="administrator_bliink@gmail.com"/>
-                <PanelPeople name="Josie rios" option1="Administrator" option2="administrator_bliink@gmail.com"/>
-                <PanelPeople name="Josie rios" option1="Administrator" option2="administrator_bliink@gmail.com"/>
-                <PanelPeople name="Josie rios" option1="Administrator" option2="administrator_bliink@gmail.com"/>
-                <PanelPeople name="Josie rios" option1="Administrator" option2="administrator_bliink@gmail.com"/>
-
+                {this.listRender()}
 
                 <div className="clearfix"></div>
                 <ul className="pagination">
