@@ -34,7 +34,7 @@
   padding-top:50px;
 }
 .btn-radius{
-  border-radius: 20px;
+  border-radius: 30px;
 }
 .login-page-1 .form-custom-1{
   margin:0 30% 230px 30%;
@@ -64,4 +64,14 @@
 
 #add_user .modal-dialog .modal-header h2, .popup_add .modal-dialog .modal-header h2{
   padding-left: 20px;
+}
+
+.btn-padding{
+  padding:10px 0 10px 0;
+}
+
+.list-view .panel-people-inner .dropdown-menu{
+  transform: translate3d(140px, 41px, 0px) !important;
+  min-width: 0;
+  max-width: 9rem;
 }

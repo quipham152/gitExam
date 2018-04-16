@@ -32,7 +32,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       <div>
       <Header/>
       <div id="main-content">
-          <UserResetPassword/>
+          <ListUsers/>
       </div>
       </div>
 

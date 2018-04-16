@@ -21,10 +21,10 @@ class UserResetPassword extends React.Component { // eslint-disable-line react/p
               <input type="password" className="form-control" id="newPassword" placeholder="New password" />
             </div>
             <div className="form-group">
-              <input type="password" className="form-control" id="exampleConfirmPassword1" placeholder="Confim password" />
+              <input type="password" className="form-control" id="exampleConfirmPassword1" placeholder="Confirm password" />
             </div>
             <div className="form-group">
-              <button type="button" className="btn btn-danger btn-radius">Reset password</button>
+              <button type="button" className="btn btn-danger btn-radius btn-padding">RESET PASSWORD</button>
               <a href="forgot-password">Back to sign in</a>
             </div>
           </form>
