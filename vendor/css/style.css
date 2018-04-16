@@ -1,6 +1,8 @@
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #F8F8FA; }
+  background-color: #F8F8FA; 
+  font-size: 14px !important;
+}
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -23,7 +25,9 @@ body {
 
 .icon-arrow-left2:before {
   content: "\ea40"; }
-
+.btn:focus, button:focus{
+  box-shadow: none !important;
+}
 #header {
   background-color: #232A37;
   color: #fff; }
@@ -31,8 +35,15 @@ body {
     background-color: transparent;
     border-color: transparent; }
     #header .navbar-default .navbar-nav > li a {
+      color: #777; 
       text-transform: uppercase;
       padding: 15px 24px; }
+      #header .navbar-default .navbar-nav > li a:hover {
+        color: #fff;
+      }
+      #header .navbar-default .navbar-nav > li a:hover  {
+        color: #fff;
+      }
       #header .navbar-default .navbar-nav > li a::after {
         content: '';
         display: block;
@@ -43,6 +54,7 @@ body {
       #header .navbar-default .navbar-nav > li.active a::after {
         border-bottom: 1px solid #fff; }
   #header #account_login {
+    padding-right: 1%;
     text-align: right; }
     #header #account_login button {
       background-color: transparent;
@@ -56,15 +68,18 @@ body {
       max-height: 45px;
       float: left;
       margin-right: 5px; }
-    #header #account_login p {
+    #header #account_login span {
       font-size: 15px;
       color: #777;
       float: left;
       margin-bottom: 0;
       line-height: 45px; }
     #header #account_login .fa-caret-down {
+      font-size: 1.5em;
       padding-left: 10px;
       line-height: 45px; }
+      #header #account_login button::after {
+        content: unset; }
     #header #account_login .fa-caret-down:before {
       color: #777; }
     #header #account_login .dropdown-menu {
@@ -72,6 +87,9 @@ body {
       #header #account_login .dropdown-menu a {
         color: #fff;
         padding: 15px 35px; }
+        #header #account_login .dropdown-menu a.dropdown-item:hover{
+          background-color: #232A37;
+        }
 
 #block-1 {
   padding-top: 112px;
