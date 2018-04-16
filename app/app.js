@@ -23,15 +23,20 @@ import App from 'containers/App';
 import LanguageProvider from 'containers/LanguageProvider';
 
 // Import Theme file css
-// import '!!style-loader!css-loader!../vendor/css/style.css';
-import '!!style-loader!css-loader!../vendor/css/styles.css';
-// import '!!style-loader!css-loader!../vendor/css/bootstrap-grid.css';
-// import '!!style-loader!css-loader!../vendor/css/bootstrap-reboot.css';
+ import '!!style-loader!css-loader!../vendor/css/style.css';
+// import '!!style-loader!css-loader!../vendor/css/styles.css';
+ //import '!!style-loader!css-loader!../vendor/css/bootstrap-grid.css';
+ //import '!!style-loader!css-loader!../vendor/css/bootstrap-reboot.css';
 // import '!!style-loader!css-loader!../vendor/css/fontface.css';
 // import '!!style-loader!css-loader!../vendor/css/mixin.css';
-// import '!!style-loader!css-loader!../vendor/css/select2.min.css';
+ import '!!style-loader!css-loader!../vendor/css/select2.min.css';
 import '!!style-loader!css-loader!../vendor/css/fontawesome-all.min.css';
-//import '!!style-loader!css-loader!../vendor/css/bootstrap.css';
+import '!!style-loader!css-loader!../vendor/css/bootstrap.css';
+//import '!!style-loader!css-loader!../vendor/css/style_custom.css';
+import '../vendor/scss/style_custom.scss';
+import '../vendor/scss/style_custom.1.scss';
+import '../vendor/js/select2.full.min.js';
+import $ from 'jquery';
 // Import template Js
 import bootstrap from '../node_modules//bootstrap/dist/js/bootstrap';
 

@@ -9,15 +9,22 @@ import React from 'react';
 
 
 class SearchBar extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  constructor(props){
+  constructor(props) {
     super(props);
 
   }
   render() {
     return (
-      <div className="form-group col-sm-3 col-xs-12">
-        <input type="email" onChange={this.props.handleChange} className="form-control" id="exampleInputEmail1" placeholder="Search by compaign name..." />
-        <button type="submit" className="btn btn-default"><i className="fa fa-search"></i></button>
+      // <div className="form-group col-sm-3 col-xs-12">
+      //   <input type="email" onChange={this.props.handleChange} className="form-control" id="exampleInputEmail1" placeholder="Search by compaign name..." />
+      //   <button type="submit" className="btn btn-default"><i className="fa fa-search"></i></button>
+      // </div>
+      <div className="search-form">
+        <input type="email" onChange={this.props.handleChange} className="form-control"
+          id="exampleInputEmail1" placeholder="Search by compaign name..." />
+
+        <button type="submit" className="btn search-btn col-xs-12"><i className="fa fa-search"></i></button>
+
       </div>
     );
   }

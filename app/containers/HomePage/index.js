@@ -14,6 +14,16 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import Header from '../../components/Header';
 import TopHeader from '../../components/TopHeader';
+import ListUsers from '../../components/ListUsers';
+import ListTags from '../../components/ListTags';
+import ListSites from '../../components/ListSites';
+import ListPacks from '../../components/ListPacks';
+import ListNetworks from '../../components/ListNetworks';
+import ListAds from '../../components/ListAds';
+import ListAdvertisers from '../../components/ListAdvertisers';
+import ListCompaigns from '../../components/ListCompaigns';
+import HomePageSignIn from '../../components/HomePageSignIn';
+import UserMyAccount from '../../components/UserMyAccount';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -21,7 +31,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       <div>
       <Header/>
       <div id="main-content">
-        <TopHeader/>
+          <ListUsers/>
       </div>
       </div>
 

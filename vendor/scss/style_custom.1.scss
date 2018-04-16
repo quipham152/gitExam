@@ -1,0 +1,64 @@
+.dropdown-toggle::after{
+  display: none;
+}
+.showoption{
+  background-color:transparent;
+  float: right;
+}
+.search-btn{
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  top:0;
+}
+.search-form{
+  position: relative;
+  input[type=email]{
+    width: 250px;
+  }
+}
+.page-link{
+  border-radius: 50px;
+}
+.page-item:first-child .page-link,.page-item:last-child .page-link{
+  border-radius: 50px;
+}
+.search-form input[type=email]{
+  width: 350px;
+  left: 0;
+}
+.view-view{
+  padding:10px 30px 10px;
+}
+.login-page-1{
+  padding-top:20px;
+}
+.btn-radius{
+  border-radius: 20px;
+}
+.login-page-1 .form-custom-1{
+  margin:0 30% 230px 30%;
+}
+.btn-secondary2{
+  color: #6c757d;
+  background-color: #fff;
+  border-radius: 20px;
+  padding:10px;
+}
+.btn-right{
+  float:right;
+  padding: 10px 40px 10px 40px;
+}
+
+#add_user .modal-dialog .modal-content, .popup_add .modal-dialog .modal-content{
+  padding: 0;
+  left: 0;
+}
+
+.profile-page .avatar{
+  margin:auto;
+}
+.profile-page .form-left{
+ margin:30px;
+}
+

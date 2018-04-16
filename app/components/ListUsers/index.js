@@ -20,6 +20,10 @@ class ListUsers extends React.Component { // eslint-disable-line react/prefer-st
         { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
         { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
         { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
+        { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
+        { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
+        { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
+        { name: "Josie rios", option1: "Administrator", option2: "administrator_bliink@gmail.com" },
       ]
     };
 
@@ -29,33 +33,28 @@ class ListUsers extends React.Component { // eslint-disable-line react/prefer-st
   }
   listRender() {
     return this.state.arrPeople.map(people => (<PanelPeople name={people.name}
-    option1={people.option1} option2={people.option2} />));
+      option1={people.option1} option2={people.option2} id="add_user" type="User" />));
   }
   render() {
     return (
-      <div>
-        <div id="main-content">
-          <div className="list-view container">
-            <div className="row">
-              <form className="form-inline">
-                <SearchBar handleChange={this.state.handleChange} />
+      <div className="list-view container col-xl ">
+        <form className="form-inline view-view">
+          <SearchBar handleChange={this.state.handleChange} />
+        </form>
 
-
-                <div className="clearfix"></div>
-                {this.listRender()}
-
-                <div className="clearfix"></div>
-                <ul className="pagination">
-                  <li><a className="active" href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#"><i className="fa fa-angle-right"></i></a></li>
-                </ul>
-              </form>
-            </div>
-          </div>
+        <div className="row view-view">
+          {this.listRender()}
         </div>
+        <nav aria-label="Page navigation example">
+          <ul className="pagination">
+            <li className="page-item"><a className="page-link" href="#">1</a></li>
+            <li className="page-item"><a className="page-link" href="#">2</a></li>
+            <li className="page-item"><a className="page-link" href="#">3</a></li>
+            <li className="page-item"><a className="page-link" href="#">></a></li>
+          </ul>
+        </nav>
       </div>
+
     );
   }
 }

@@ -31,42 +31,39 @@ class ListSites extends React.Component { // eslint-disable-line react/prefer-st
   }
   render() {
     return (
-      <div>
-        <div id="main-content">
 
-          <div className="list-view container">
-            <div className="row">
-              <form className="form-inline" >
-                <SearchBar handleChange={this.state.handleChange} />
+      <div className="list-view container col-xl">
 
-                <div className="clearfix"></div>
-                <table id="datatable" className="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>name</th>
-                      <th>type</th>
-                      <th>volume</th>
-                      <th>sdk version</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {this.dataRender()}
-
-                  </tbody>
-                </table>
-                <div className="clearfix"></div>
-                <ul className="pagination">
-                  <li><a className="active" href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#"><i className="fa fa-angle-right"></i></a></li>
-                </ul>
-              </form>
-            </div>
-          </div>
+        <form className="form-inline view-view" >
+          <SearchBar handleChange={this.state.handleChange} />
+        </form>
+        <div className="row view-view">
+          <div className="clearfix"></div>
+          <table id="datatable" className="table table-hover">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>type</th>
+                <th>volume</th>
+                <th>sdk version</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.dataRender()}
+            </tbody>
+          </table>
         </div>
+        <div className="clearfix"></div>
+        <nav aria-label="Page navigation example">
+          <ul className="pagination">
+            <li className="page-item"><a className="page-link" href="#">1</a></li>
+            <li className="page-item"><a className="page-link" href="#">2</a></li>
+            <li className="page-item"><a className="page-link" href="#">3</a></li>
+            <li className="page-item"><a className="page-link" href="#">></a></li>
+          </ul>
+        </nav>
       </div>
     );
   }
