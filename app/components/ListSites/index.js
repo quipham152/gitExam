@@ -27,7 +27,7 @@ class ListSites extends React.Component { // eslint-disable-line react/prefer-st
   }
   dataRender() {
     return this.state.datas.map(data => (<ListSitesData id={data.id} name={data.name}
-      type={data.type} volumn={data.volumn} version={data.version} />));
+      type={data.type} volumn={data.volumn} version={data.version} type="Site"/>));
   }
   render() {
     return (
@@ -50,9 +50,7 @@ class ListSites extends React.Component { // eslint-disable-line react/prefer-st
                 <th></th>
               </tr>
             </thead>
-            <tbody>
-              {this.dataRender()}
-            </tbody>
+            <tbody> {this.dataRender()} </tbody>
           </table>
         </div>
         <div className="clearfix"></div>

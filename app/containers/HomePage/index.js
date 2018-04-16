@@ -24,6 +24,7 @@ import ListAdvertisers from '../../components/ListAdvertisers';
 import ListCompaigns from '../../components/ListCompaigns';
 import HomePageSignIn from '../../components/HomePageSignIn';
 import UserMyAccount from '../../components/UserMyAccount';
+import UserResetPassword from '../../components/UserResetPassword';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -31,7 +32,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       <div>
       <Header/>
       <div id="main-content">
-          <ListUsers/>
+          <UserMyAccount/>
       </div>
       </div>
 

@@ -33,7 +33,7 @@ class UserMyAccount extends React.Component { // eslint-disable-line react/prefe
           <div className="container ">
             <div className="avatar text-center d-flex justify-content-center">
               <div className="background-cover " style={bgstyle}>
-                <img className="img-fluid rounded " src={img1} />
+                {/* <img className="img-fluid rounded " src={img1} /> */}
                 <i className="icon-pencil"></i>
               </div>
             </div>

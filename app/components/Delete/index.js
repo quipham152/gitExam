@@ -16,8 +16,8 @@ class Delete extends React.Component { // eslint-disable-line react/prefer-state
   render() {
     return (
       <div>
-        <div className="modal fade" tabIndex="-1" role="dialog" id="myModal"
-        data-target="#myModal" href="Delete" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" tabIndex="-1" role="dialog" id="delete"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog center_modal modal-lg" role="document">
             <div className="modal-content">
               {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
