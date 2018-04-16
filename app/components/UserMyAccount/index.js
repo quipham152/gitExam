@@ -57,7 +57,7 @@ class UserMyAccount extends React.Component { // eslint-disable-line react/prefe
                   <div className="form-group">
                     <label htmlFor="InputEmail">Email</label>
                     <input type="email" className="form-control" id="InputEmail"
-                    placeholder="email..." onChange={this.handleEmail}/>
+                    placeholder="samuelkerboeuf@blink.com" onChange={this.handleEmail}/>
                   </div>
                 </div>
               </div>
