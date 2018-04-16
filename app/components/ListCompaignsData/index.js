@@ -37,6 +37,15 @@ class ListCompaignsData extends React.Component { // eslint-disable-line react/p
           </div>
         </td>
         <Delete name={this.props.name} type={this.props.type}/>
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ...
+            </button>
+            <ul className="dropdown-menu">
+              <li><a className="dropdown-item" href="#"><i className="fa fa-pencil"></i> Edit</a></li>
+              <li><a className="dropdown-item" data-toggle="modal" data-target="#delete_tag" href="#"><i className="fa fa-trash-o"></i> Delete</a></li>
+            </ul>
+          </div>
+        </td>
       </tr>
     );
   }

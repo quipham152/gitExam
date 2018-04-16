@@ -39,7 +39,11 @@ class HomePageSignIn extends React.Component { // eslint-disable-line react/pref
             </div>
             <br/>
             <div className="form-group">
+
               <button type="button" className="btn btn-danger btn-radius btn-padding">SIGN IN</button>
+
+              <button type="button" className="btn btn-danger btn-radius">Sign in</button>
+
               <a href="forgot-password">Forgot password ?</a>
             </div>
 

@@ -36,7 +36,11 @@ class PanelPeople extends React.Component { // eslint-disable-line react/prefer-
           <button className="btn btn-primary dropdown-toggle float-right" type="button" data-toggle="dropdown">...</button>
           <ul className="dropdown-menu">
             <li><a className="dropdown-item" data-toggle="modal" data-target={'#'+this.props.id} href="#"><i className="fa fa-pencil"></i> Edit</a></li>
+
             <li><a className="dropdown-item" data-toggle="modal" data-target="#delete" href="#"><i className="fa fa-trash-o"></i> Delete</a></li>
+
+            <li><a className="dropdown-item" data-toggle="modal" data-target="#myModal" href="#"><i className="fa fa-trash-o"></i> Delete</a></li>
+
           </ul>
           <img alt="Samuel" src={avatar} />
           <h3>{this.props.name}</h3>

@@ -26,7 +26,10 @@ class ListTags extends React.Component { // eslint-disable-line react/prefer-sta
   }
   dataRender() {
     return this.state.datas.map(data => (<ListTagsData id={data.id} name={data.name}
+
       content={data.content} volumn={data.volumn} type="Tag"/>));
+
+      content={data.content} volumn={data.volumn} />));
   }
   render() {
     return (
