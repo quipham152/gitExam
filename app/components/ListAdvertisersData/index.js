@@ -5,6 +5,10 @@
 */
 
 import React from 'react';
+
+import Delete from '../Delete';
+
+
 // import styled from 'styled-components';
 
 
@@ -21,6 +25,18 @@ class ListAdvertisersData extends React.Component { // eslint-disable-line react
         <td><span className="badge badge-success">{this.props.status}</span></td>
         <td>
           <div className="dropdown show">
+
+            <button className="btn showoption dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ...
+            </button>
+            <ul className="dropdown-menu">
+              <li><a className="dropdown-item" data-target="#add_advertiser" data-toggle="modal" href="#"><i className="fa fa-pencil"></i> Edit</a></li>
+              <li><a className="dropdown-item" data-target="#delete" data-toggle="modal"  href="#"><i className="fa fa-trash-o"></i> Delete</a></li>
+            </ul>
+          </div>
+        </td>
+        <Delete name={this.props.name} type={this.props.type}/>
+
             <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               ...
             </button>

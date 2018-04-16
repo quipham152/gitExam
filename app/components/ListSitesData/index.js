@@ -6,6 +6,7 @@
 
 import React from 'react';
 import AddEditSites from '../AddEditSites';
+import Delete from '../Delete';
 // import styled from 'styled-components';
 
 
@@ -29,11 +30,13 @@ class ListSitesData extends React.Component { // eslint-disable-line react/prefe
             <ul className="dropdown-menu">
               <li><a className="dropdown-item" data-target="#add_site" data-toggle="modal" href="#"><i className="fa fa-pencil"></i> Edit</a></li>
               <li><a className="dropdown-item" href="#"><i className="fa fa-download"></i> Intergration</a></li>
+              <li><a className="dropdown-item" data-target="#delete" data-toggle="modal"  href="#"><i className="fa fa-trash-o"></i> Delete</a></li>
               <li><a className="dropdown-item" data-target="#delete_site" data-toggle="modal"  href="#"><i className="fa fa-trash-o"></i> Delete</a></li>
             </ul>
           </div>
         </td>
         <AddEditSites action="Edit" />
+        <Delete name={this.props.name} type={this.props.type}/>
       </tr>
     );
   }

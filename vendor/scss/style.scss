@@ -75,7 +75,6 @@ $bliink_dark_red:      #B30010 !default;
       padding-left: 10px;
       line-height: 45px;
       font-size: 1.8em;
-      
     }
     .fa-caret-down:before{
       color: #777;
@@ -96,7 +95,7 @@ $bliink_dark_red:      #B30010 !default;
   padding-top: 112px;
   padding-bottom: 80px;
   .col-sm-3.col-xs-6{
-    
+
     p.price{
       color: #000;
       font-size: 32px;
@@ -298,7 +297,7 @@ $bliink_dark_red:      #B30010 !default;
 @include placeholder();
 .list-view{
   padding-top: 60px;
-  
+
   div.form-group.col-sm-3{
     padding-bottom: 48px;
     input{

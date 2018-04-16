@@ -19,7 +19,9 @@ class AddEditTags extends React.Component { // eslint-disable-line react/prefer-
     this.setState({ name: e.target.value });
   }
   render() {
-    const {value} = this.props;
+
+    const { value } = this.props;
+
     return (
 
       <div>
@@ -29,8 +31,11 @@ class AddEditTags extends React.Component { // eslint-disable-line react/prefer-
             <div className="modal-header">
               <h2>{this.props.action} Tag</h2>
             </div>
-            <form>
-              <div className="modal-content">
+
+
+            <div className="modal-content">
+              <form>
+
                 <div className="form-group">
                   <label htmlFor="inputName">Name</label>
                   <input type="text" className="form-control" id="inputName"
@@ -38,7 +43,6 @@ class AddEditTags extends React.Component { // eslint-disable-line react/prefer-
                 </div>
                 <div className="form-group input-group">
                   <label htmlFor="inputSite">Site</label>
-
 
                   <Select2
                     value={value}
@@ -52,6 +56,7 @@ class AddEditTags extends React.Component { // eslint-disable-line react/prefer-
                       placeholder: 'site name...',
                     }}
                   />
+
                   {/* <Select2
                     multiple
                     data={['Carrefour', 'Carrefour', 'documents', 'discussion']}
@@ -73,12 +78,22 @@ class AddEditTags extends React.Component { // eslint-disable-line react/prefer-
                     <option value="2" title="Food retail and sevice 2">Carrefour 2</option>
                   </select>
                 </div>
+
+              </form>
+
+
+
               </div>
+
               <div className="modal-footer">
                 <button type="button" className="btn btn-primary">Validate</button>
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>
               </div>
+
+            </div>
+
             </form>
+
           </div>
         </div>
 

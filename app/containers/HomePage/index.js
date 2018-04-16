@@ -25,6 +25,8 @@ import ListCompaigns from '../../components/ListCompaigns';
 import HomePageSignIn from '../../components/HomePageSignIn';
 import UserMyAccount from '../../components/UserMyAccount';
 
+import UserResetPassword from '../../components/UserResetPassword';
+
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (

@@ -36,6 +36,17 @@ class ListAds extends React.Component { // eslint-disable-line react/prefer-stat
   dataRender() {
     return this.state.datas.map(data => (<ListAdsData name={data.name} advertiser={data.advertiser}
       startdate={data.startdate} enddate={data.enddate} budget={data.budget} impression={data.impression}
+
+      click={data.click} ctr={data.ctr} status={data.status} type="Ads" />))
+  }
+  render() {
+    return (
+      <div className="list-view container col-xl">
+
+        <form action="form-inline" >
+          <div className="row view-view">
+            <table id="datatable" className="table table-hover">
+
       click={data.click} ctr={data.ctr} status={data.status} />))
   }
   render() {
@@ -44,6 +55,7 @@ class ListAds extends React.Component { // eslint-disable-line react/prefer-stat
         <div className="row">
           <form action="form-inline" >
             <table id="datatable" className="table">
+
               <thead>
                 <tr>
                   <th >Name</th>
@@ -58,13 +70,17 @@ class ListAds extends React.Component { // eslint-disable-line react/prefer-stat
                   <th ></th>
                 </tr>
               </thead>
+
+              <tbody> {this.dataRender()} </tbody>
+            </table>
+            <div className="clearfix"></div>
+          </div>
+        </form>
               <tbody>
                 {this.dataRender()}
-
               </tbody>
             </table>
             <div className="clearfix"></div>
-
           </form>
         </div>
         <nav aria-label="Page navigation example">
